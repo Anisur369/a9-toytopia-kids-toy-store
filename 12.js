@@ -1,11 +1,11 @@
+12;
+
 import React, { use, useState } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "./../context/AuthContext";
-import { updateProfile } from "firebase/auth";
 
 export default function Register() {
   const { createUser } = use(AuthContext);
-
   const [formData, setFormData] = useState({
     fullName: "",
     email: "",
@@ -38,10 +38,7 @@ export default function Register() {
       .then((userCredential) => {
         // Signed in
         const user = userCredential.user;
-        updateProfile(user, {
-          displayName: formData.fullName,
-          photoURL: formData.photoURL,
-        });
+        console.log(user);
       })
       .catch((error) => {
         const errorCode = error.code;

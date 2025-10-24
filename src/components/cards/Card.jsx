@@ -1,6 +1,13 @@
 import { Link } from "react-router-dom";
 
-const Card = ({ pictureURL, toyName, rating, availableQuantity, price }) => {
+const Card = ({
+  toyId,
+  pictureURL,
+  toyName,
+  rating,
+  availableQuantity,
+  price,
+}) => {
   return (
     <div className="card w-full md:w-80 bg-base-100 shadow-xl hover:shadow-2xl transition duration-300">
       <figure className="px-6 pt-6">
@@ -18,7 +25,7 @@ const Card = ({ pictureURL, toyName, rating, availableQuantity, price }) => {
         </div>
         <p className="text-md font-bold text-primary mt-2">${price}</p>
         <div className="card-actions mt-4">
-          <Link to={`/toy/${toyName}`}>
+          <Link to={`/details/${toyId}`}>
             <button className="btn btn-sm btn-outline btn-primary">
               View More
             </button>

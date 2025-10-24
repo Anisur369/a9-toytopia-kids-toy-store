@@ -5,6 +5,7 @@ import "./header.css";
 
 const Header = () => {
   const { user, signOutUser } = use(AuthContext);
+
   const handleSignOut = () => {
     signOutUser();
   };
@@ -14,7 +15,12 @@ const Header = () => {
       <div className="w-full container flex  mx-auto pr-4">
         <div className="navbar-start">
           <div className="dropdown">
-            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+            <Link
+              to="/"
+              tabIndex={0}
+              role="button"
+              className="btn btn-ghost lg:hidden"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-5 w-5"
@@ -30,7 +36,7 @@ const Header = () => {
                   d="M4 6h16M4 12h8m-8 6h16"
                 />{" "}
               </svg>
-            </div>
+            </Link>
             <ul
               tabIndex="-1"
               className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow"
@@ -43,14 +49,6 @@ const Header = () => {
               </li>
               <li>
                 <NavLink to="/login">Login</NavLink>
-                <ul className="p-2">
-                  <li>
-                    <a>Submenu 1</a>
-                  </li>
-                  <li>
-                    <a>Submenu 2</a>
-                  </li>
-                </ul>
               </li>
               <li>
                 <NavLink to="/register">Register</NavLink>
@@ -67,65 +65,34 @@ const Header = () => {
             <li>
               <NavLink to="/profile">My Profile</NavLink>
             </li>
-            <li>
-              <details>
-                <summary>
-                  <NavLink to="/login">Login</NavLink>
-                </summary>
-                <ul className="p-2">
-                  <li>
-                    <a>Submenu 1</a>
-                  </li>
-                  <li>
-                    <a>Submenu 2</a>
-                  </li>
-                </ul>
-              </details>
-            </li>
-            <li>
-              <NavLink to="/register">Register</NavLink>
-            </li>
-            {/* {user && (
-              <>
-                <li>
-                  <NavLink to="/dashboard">Dashboard</NavLink>
-                </li>
-                <li>
-                  <NavLink to="/profile">Profile</NavLink>
-                </li>
-                <li>
-                  <NavLink to="/about">About</NavLink>
-                </li>
-              </>
-            )} */}
 
-            <li>
+            {/* <li>
               <NavLink to="/dashboard">Dashboard</NavLink>
             </li>
             <li>
               <NavLink to="/about">About</NavLink>
-            </li>
+            </li> */}
           </ul>
         </div>
         <div className="navbar-end">
           {user ? (
-            <div className="flex gap-2">
+            <div className="flex gap-4">
               <div className="relative group inline-block">
                 {/* Profile Image */}
                 <Link to="/profile">
                   <img
-                    src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+                    src={user.photoURL}
                     alt="User Avatar"
-                    className="w-10 h-10 rounded-full cursor-pointer shadow-emerald-200 shadow-md"
+                    className="w-10 h-10 rounded-full cursor-pointer shadow-emerald-300 shadow-md"
                   />
                 </Link>
 
                 {/* Hover Name */}
                 <Link
                   to="/profile"
-                  className="absolute left-[-20px] top-10 bg-gray-100 text-sm font-medium px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"
+                  className="absolute left-[-42px] top-10 bg-gray-100 text-sm font-medium px-3 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10"
                 >
-                  Anis
+                  {user.displayName}
                 </Link>
               </div>
               <a onClick={handleSignOut} className="btn">
@@ -133,9 +100,14 @@ const Header = () => {
               </a>
             </div>
           ) : (
-            <Link to="/login" className="btn">
-              Login
-            </Link>
+            <div className="flex gap-4">
+              <Link to="/login" className="btn">
+                Login
+              </Link>
+              <Link to="/register" className="btn">
+                Register
+              </Link>
+            </div>
           )}
         </div>
       </div>

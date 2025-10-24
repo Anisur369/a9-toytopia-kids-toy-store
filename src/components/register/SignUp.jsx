@@ -1,24 +1,20 @@
-import React, { useState } from "react";
-import { Link, useLocation, useNavigate } from "react-router-dom";
-import { use } from "react";
+import React, { use, useState } from "react";
+import { Link } from "react-router-dom";
 import { AuthContext } from "./../context/AuthContext";
 
-function Login() {
+function Register() {
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const { signInUser } = use(AuthContext);
-  
-
-  const location = useLocation();
-  const navigate = useNavigate();
+  const { createUser } = use(AuthContext);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    signInUser(email, password)
-      .then(() => {
-        setEmail("");
-        setPassword("");
-        navigate(location.state || "/");
+    createUser(email, password)
+      .then((userCredential) => {
+        // Signed in
+        const user = userCredential.user;
+        console.log(user);
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -28,12 +24,20 @@ function Login() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="form-control" onSubmit={handleSubmit}>
+      <label>
+        Name:
+        <input
+          type="text"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+        />
+      </label>
       <label>
         Email:
         <input
-          className="border"
-          type="text"
+          className="input input-bordered w-full max-w-xs"
+          type="email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
@@ -41,20 +45,20 @@ function Login() {
       <label>
         Password:
         <input
-          className="border"
+          className="input input-bordered w-full max-w-xs"
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
       </label>
       <button className="btn btn-primary" type="submit">
-        Login
+        Register
       </button>
       <p>
-        Already have an account? <Link to="/register">Register</Link>
+        Already have an account? <Link to="/login">Login</Link>
       </p>
     </form>
   );
 }
 
-export default Login;
+export default Register;

@@ -7,6 +7,7 @@ import Dashboard from "../dashboard/Dashboard";
 import Profile from "../profile/Profile";
 import PrivateRoute from "./PrivateRoute";
 import NotFound from "../notFound/NotFound";
+import Details from "../details/Details";
 
 const Router = createBrowserRouter([
   {
@@ -26,10 +27,15 @@ const Router = createBrowserRouter([
         element: <Register />,
       },
       {
-        path: "/dashboard",
+        path: "/details/:id",
+        loader: async () => {
+          const response = await fetch("/cards.json");
+          const data = await response.json();
+          return data;
+        },
         element: (
           <PrivateRoute>
-            <Dashboard />
+            <Details />
           </PrivateRoute>
         ),
       },
