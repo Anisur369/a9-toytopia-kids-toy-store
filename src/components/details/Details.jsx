@@ -5,13 +5,14 @@ const Details = () => {
   const [data, setData] = useState([]);
   const app = useLoaderData();
   const { id } = useParams();
+  const num = parseInt(id) - 1;
 
   const handleSubmit = (e) => {
     e.preventDefault();
   };
 
   useEffect(() => {
-    setData(app[id]);
+    setData(app[num]);
   }, [id, app]);
 
   return (

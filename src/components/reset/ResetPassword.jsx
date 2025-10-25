@@ -1,5 +1,7 @@
 import React, { useState, use } from "react";
 import { AuthContext } from "../context/AuthContext";
+//redirect import react router dom & react
+import { Link, useNavigate } from "react-router-dom";
 
 const ResetPassword = () => {
   const [email, setEmail] = useState("");
@@ -8,10 +10,14 @@ const ResetPassword = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     ResetPassword(email);
+    // redirect to gmail
+    // window.location.href = "https://mail.google.com";
+    // redirect to gmail method 2
+    window.location.replace("https://mail.google.com");
   };
 
   return (
-    <div className="min-h-screen from-blue-100 to-blue-300 flex items-center justify-center px-4">
+    <div className="min-h-[80vh] from-blue-100 to-blue-300 flex items-center justify-center px-4">
       <div className="bg-gradient-to-br from-white via-indigo-50 to-blue-100 shadow-xl rounded-xl p-8 w-full max-w-md">
         <h2 className="text-2xl font-bold text-center text-primary mb-4">
           Reset password
