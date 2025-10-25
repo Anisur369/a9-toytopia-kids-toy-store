@@ -7,6 +7,7 @@ import Information from "./Information";
 const Home = () => {
   return (
     <>
+      <title>Toytopia Home</title>
       {/* <CarouselComponent /> */}
       <SwiperSlider />
       <Cards />

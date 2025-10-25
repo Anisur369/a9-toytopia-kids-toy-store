@@ -36,6 +36,7 @@ function Login() {
 
   return (
     <div className="mx-auto mt-8 mb-10 fieldset bg-base-200 border-base-300 rounded-box w-sm border p-4">
+      <title>Toytopia Login</title>
       <form
         onSubmit={handleSubmit}
         className="fieldset bg-base-200 border-base-300 rounded-box border p-4"

@@ -3,6 +3,7 @@ import React from "react";
 const About = () => {
   return (
     <div className="bg-base-100 text-base-content px-4 py-10 md:px-20">
+      <title>Toytopia About</title>
       <div className="max-w-4xl mx-auto">
         <h1 className="text-3xl md:text-4xl font-bold text-center mb-6 text-primary">
           About us

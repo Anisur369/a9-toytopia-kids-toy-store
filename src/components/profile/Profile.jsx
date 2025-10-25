@@ -29,6 +29,7 @@ export default function Profile() {
 
   return (
     <div className="max-w-xl mx-auto mt-10 p-6 bg-base-200 rounded-lg shadow-lg mb-30">
+      <title>Toytopia Profile</title>
       <h2 className="text-2xl font-bold text-center mb-6">Profile Page</h2>
 
       <div className="flex flex-col items-center mb-6">

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 export default function NotFound() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-base-200 text-center px-4">
+      <title>Toytopia NotFound</title>
       <h1 className="text-6xl font-bold text-error mb-4">404</h1>
       <h2 className="text-4xl font-semibold mb-2">Page Not Found</h2>
       <p className="text-gray-600 mb-6 mt-4">
