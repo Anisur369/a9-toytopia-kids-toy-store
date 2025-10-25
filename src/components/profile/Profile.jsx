@@ -38,6 +38,7 @@ export default function Profile() {
           alt="Profile"
           className="w-24 h-24 rounded-full object-cover shadow-md"
         />
+        <b className="w-full text-gray-500 text-left mt-4">Photo URL:</b>
         <input
           type="url"
           value={photoURL}
@@ -48,6 +49,9 @@ export default function Profile() {
       </div>
 
       <div className="space-y-4">
+        <p className="text-gray-500">
+          <b>Name:</b>
+        </p>
         <input
           type="text"
           value={name}

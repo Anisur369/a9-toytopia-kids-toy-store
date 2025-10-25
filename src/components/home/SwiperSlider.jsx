@@ -22,6 +22,7 @@ const SwiperSlider = () => {
   };
 
   const images = [
+    "https://tse3.mm.bing.net/th/id/OIP.9iF6vP-defygpqJc7-J1kwHaEc?rs=1&pid=ImgDetMain&o=7&rm=3",
     "https://ts2.mm.bing.net/th?id=OIP.3PrP5eVXIFM6xZgi_w1NdgHaEc&pid=15.1",
     "https://ts1.mm.bing.net/th?id=OIP.9iF6vP-defygpqJc7-J1kwHaEc&pid=15.1",
     "https://ts1.mm.bing.net/th?id=OIP.-wl8tKouF-dh5hkjOTHUjQHaD9&pid=15.1",
