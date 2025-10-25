@@ -9,8 +9,8 @@ export default function Footer() {
         <div>
           <h2 className="text-xl font-bold mb-2">ToyTopic</h2>
           <p className="text-sm text-gray-500">
-            In an effort to make technology easier — tutorials, guides, and
-            solutions in Bengali.
+            In an effort to make technology easier for Bengali speakers, we
+            bring you toy-store.
           </p>
         </div>
 

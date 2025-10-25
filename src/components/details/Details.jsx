@@ -13,7 +13,7 @@ const Details = () => {
 
   useEffect(() => {
     setData(app[num]);
-  }, [id, app]);
+  }, [app, num]);
 
   return (
     <div>

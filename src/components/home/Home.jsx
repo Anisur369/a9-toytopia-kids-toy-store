@@ -1,12 +1,17 @@
-import CarouselComponent from "../pages/Carousel";
-import MarqueeComponent from "./Marquee";
+// import CarouselComponent from "../pages/Carousel";
 import Cards from "../cards/Cards";
+import SwiperSlider from "./SwiperSlider";
+import ContactForm from "./ContactForm";
+import Information from "./Information";
 
 const Home = () => {
   return (
     <>
-      <CarouselComponent />
+      {/* <CarouselComponent /> */}
+      <SwiperSlider />
       <Cards />
+      <Information />
+      <ContactForm />
     </>
   );
 };
