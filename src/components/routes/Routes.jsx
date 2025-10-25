@@ -3,11 +3,13 @@ import Root from "../root/Root";
 import Home from "../home/Home";
 import Login from "../login/Login";
 import Register from "../register/Register";
-import Dashboard from "../dashboard/Dashboard";
+// import Dashboard from "../dashboard/Dashboard";
 import Profile from "../profile/Profile";
 import PrivateRoute from "./PrivateRoute";
 import NotFound from "../notFound/NotFound";
 import Details from "../details/Details";
+import About from "../about/About";
+import ResetPassword from "../reset/ResetPassword";
 
 const Router = createBrowserRouter([
   {
@@ -51,9 +53,13 @@ const Router = createBrowserRouter([
         path: "/about",
         element: (
           <PrivateRoute>
-            <h1>This is About page</h1>
+            <About />
           </PrivateRoute>
         ),
+      },
+      {
+        path: "/reset-password",
+        element: <ResetPassword />,
       },
     ],
   },

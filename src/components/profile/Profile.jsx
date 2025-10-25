@@ -1,6 +1,7 @@
 import { useState, use, useEffect } from "react";
 import { AuthContext } from "../context/AuthContext";
 import { updateProfile } from "firebase/auth";
+import { Link } from "react-router-dom";
 
 export default function Profile() {
   const [name, setName] = useState("");
@@ -67,6 +68,12 @@ export default function Profile() {
           Update Profile
         </button>
       </div>
+      {/* password reset */}
+      <p className="text-blue-500 mt-4">
+        <Link to="/reset-password">
+          <b>Reset Password</b>
+        </Link>
+      </p>
     </div>
   );
 }

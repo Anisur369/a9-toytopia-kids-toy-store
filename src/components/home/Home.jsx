@@ -6,7 +6,6 @@ const Home = () => {
   return (
     <>
       <CarouselComponent />
-      <MarqueeComponent />
       <Cards />
     </>
   );

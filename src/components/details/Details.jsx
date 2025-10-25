@@ -106,7 +106,7 @@ const Details = () => {
                 type="submit"
                 className="bg-gradient-to-r from-indigo-600 via-blue-500 to-purple-500 text-white px-10 py-3 rounded-xl font-bold text-sm md:text-base shadow-lg hover:shadow-indigo-300 hover:scale-105 active:scale-95 transition-all duration-300"
               >
-                Submit Booking 🚀
+                Try Now
               </button>
             </div>
           </form>

@@ -68,10 +68,10 @@ const Header = () => {
 
             {/* <li>
               <NavLink to="/dashboard">Dashboard</NavLink>
-            </li>
+            </li> */}
             <li>
               <NavLink to="/about">About</NavLink>
-            </li> */}
+            </li>
           </ul>
         </div>
         <div className="navbar-end">

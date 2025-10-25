@@ -6,8 +6,14 @@ import {
   onAuthStateChanged,
   signInWithEmailAndPassword,
   signOut,
+  GoogleAuthProvider,
+  signInWithPopup,
+  sendPasswordResetEmail,
 } from "firebase/auth";
 import { useEffect } from "react";
+import ResetPassword from "./../reset/ResetPassword";
+
+const googleProvider = new GoogleAuthProvider();
 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
@@ -22,6 +28,26 @@ export const AuthProvider = ({ children }) => {
     setLoading(true);
     return signInWithEmailAndPassword(auth, email, password);
   };
+  const ResetPassword = (email) => {
+    sendPasswordResetEmail(auth, email)
+      .then((result) => {
+        // Password reset email sent!
+        // ..
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log(errorCode, errorMessage);
+        // ..
+      });
+    return;
+  };
+
+  const signInWithGoogle = () => {
+    setLoading(true);
+    return signInWithPopup(auth, googleProvider);
+  };
+
   const signOutUser = () => {
     setLoading(false);
     setUser(null);
@@ -31,6 +57,8 @@ export const AuthProvider = ({ children }) => {
     createUser,
     signInUser,
     signOutUser,
+    signInWithGoogle,
+    ResetPassword,
     user,
     loading,
     cards,
