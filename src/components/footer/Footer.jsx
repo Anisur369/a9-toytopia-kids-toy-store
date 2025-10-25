@@ -9,18 +9,18 @@ export default function Footer() {
         <div>
           <h2 className="text-xl font-bold mb-2">ToyTopic</h2>
           <p className="text-sm text-gray-500">
-            প্রযুক্তিকে সহজ করে তোলার প্রয়াসে — Bengali ভাষায় টিউটোরিয়াল, গাইড
-            এবং সমাধান।
+            In an effort to make technology easier — tutorials, guides, and
+            solutions in Bengali.
           </p>
         </div>
 
         {/* Legal Links */}
         <div>
-          <h3 className="text-lg font-semibold mb-2">তথ্য</h3>
+          <h3 className="text-lg font-semibold mb-2">Information</h3>
           <ul className="space-y-2">
             <li>
               <Link to="/terms" className="hover:underline hover:text-primary">
-                শর্তাবলী
+                Terms and Conditions
               </Link>
             </li>
             <li>
@@ -28,7 +28,7 @@ export default function Footer() {
                 to="/privacy"
                 className="hover:underline hover:text-primary"
               >
-                গোপনীয়তা নীতি
+                Privacy Policy
               </Link>
             </li>
             <li>
@@ -36,7 +36,7 @@ export default function Footer() {
                 to="/contact"
                 className="hover:underline hover:text-primary"
               >
-                যোগাযোগ করুন
+                Contact us
               </Link>
             </li>
           </ul>
@@ -44,7 +44,7 @@ export default function Footer() {
 
         {/* Social Media */}
         <div>
-          <h3 className="text-lg font-semibold mb-2">আমাদের অনুসরণ করুন</h3>
+          <h3 className="text-lg font-semibold mb-2">Follow us</h3>
           <div className="flex gap-4 text-xl">
             <a
               href="https://facebook.com"
@@ -84,7 +84,8 @@ export default function Footer() {
 
       {/* Bottom Line */}
       <div className="mt-10 text-center text-sm text-gray-400">
-        © {new Date().getFullYear()} Anis Tech. সর্বস্বত্ব সংরক্ষিত।
+        © {new Date().getFullYear()} toytopia-kids-toy-store. All rights
+        reserved.।
       </div>
     </footer>
   );

@@ -1,16 +1,33 @@
-# React + Vite
+# 🎯 প্রজেক্টের নাম: toytopia-kids-toy-store
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📝 প্রজেক্টের উদ্দেশ্য
 
-Currently, two official plugins are available:
+toytopia-kids-toy-store হলো একটি অনলাইন প্ল্যাটফর্ম যেখানে ব্যবহারকারীরা নিজেদের দক্ষতা শেয়ার করতে পারে এবং অন্যদের কাছ থেকে নতুন কিছু শিখতে পারে।  
+এটি একটি স্কিল এক্সচেঞ্জ কমিউনিটি যেখানে শেখা ও শেখানোর মাধ্যমে সবাই একসাথে এগিয়ে যায়।
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🌐 Live URL
 
-## React Compiler
+🔗 [toytopia-kids-toy-store Live Website](https://trade....)
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+## 🚀 মূল ফিচারসমূহ
 
-## Expanding the ESLint configuration
+- ✅ ব্যবহারকারীরা বিভিন্ন স্কিল লিস্ট করতে পারে (যেমন গিটার শেখা, ওয়েব ডেভেলপমেন্ট, ফটোগ্রাফি ইত্যাদি)
+- ✅ স্কিল অনুযায়ী সার্চ ও ফিল্টার করার সুবিধা
+- ✅ লগইন/সাইনআপ (Firebase Authentication)
+- ✅ স্কিল ডিটেইলস পেজ যেখানে ডেসক্রিপশন, প্রাইস, রেটিং ইত্যাদি দেখা যায়
+- ✅ ব্যবহারকারী প্রোফাইল ও স্কিল ম্যানেজমেন্ট সিস্টেম
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🧩 ব্যবহৃত NPM প্যাকেজসমূহ
+
+- `react` — React JS ফ্রেমওয়ার্ক
+- `react-router-dom` — রাউটিং এর জন্য
+- `firebase` — ইউজার অথেনটিকেশন
+- `tailwindcss` — স্টাইলিং ও রেসপনসিভ ডিজাইন
+- `react-icons` — আইকন ব্যবহারের জন্য
+- `axios` — ডেটা ফেচ করার জন্য
+
+## 💻 ডেভেলপার
+
+তৈরি করেছেন: Md. Asif Emran  
+ইমেইল: asifemran890@gmail.com  
+ প্রজেক্ট সময়কাল: অক্টোবর ২০২৫
